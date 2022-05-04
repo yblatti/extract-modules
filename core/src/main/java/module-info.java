@@ -14,22 +14,23 @@ module org.easysdi.extract.core {
     requires commons.collections;
     requires commons.validator;
     requires jakarta.mail;
+    requires jakarta.xml.bind;
     requires java.persistence;
     requires java.scripting;
     requires java.transaction;
     requires java.validation;
-    requires java.xml;
     requires nz.net.ultraq.thymeleaf.layoutdialect;
     requires org.apache.commons.lang3;
     requires org.apache.tomcat.embed.core;
+    requires org.hibernate.orm.core;
     requires org.joda.time;
     requires org.locationtech.jts;
     requires org.slf4j;
     requires spring.batch.core;
     requires spring.batch.infrastructure;
     requires spring.beans;
-    requires spring.boot;
     requires spring.boot.autoconfigure;
+    requires spring.boot;
     requires spring.context;
     requires spring.core;
     requires spring.data.commons;
@@ -41,10 +42,8 @@ module org.easysdi.extract.core {
     requires spring.tx;
     requires spring.web;
     requires spring.webmvc;
-    requires thymeleaf;
     requires thymeleaf.extras.springsecurity4;
     requires thymeleaf.spring.data.dialect;
     requires thymeleaf.spring5;
-    requires java.xml.bind;
-    requires org.hibernate.orm.core;
+    requires thymeleaf;
 }
