@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:12
+    volumes:
+      - /var/lib/docker/volumes/extract-db/_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+    volumes:
+      - /var/extract:/var/extract
+      - /var/log/extract:/var/log/extract
+      - ./tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+      - ./context.xml:/usr/local/tomcat/conf/context.xml
+      - ./manager-context.xml:/usr/local/tomcat/webapps/manager/META-INF/context.xml
+      - ./target/extract##1.3.1-RELEASE.war:/usr/local/tomcat/webapps/extract##1.3.1-RELEASE.war
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+

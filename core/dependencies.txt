@@ -1,0 +1,25 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.easysdi:extract >-------------------------
+[INFO] Building extract 1.3.1-RELEASE
+[INFO] --------------------------------[ war ]---------------------------------
+Downloading from locationtech-releases: https://repo.locationtech.org/content/groups/releases/org/easysdi/extract-plugin-interface/1.3-RELEASE/extract-plugin-interface-1.3-RELEASE.pom
+Downloading from central: https://repo.maven.apache.org/maven2/org/easysdi/extract-plugin-interface/1.3-RELEASE/extract-plugin-interface-1.3-RELEASE.pom
+[WARNING] The POM for org.easysdi:extract-plugin-interface:jar:1.3-RELEASE is missing, no dependency information available
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.2.0:tree (default-cli) @ extract ---
+Downloading from locationtech-releases: https://repo.locationtech.org/content/groups/releases/org/easysdi/extract-plugin-interface/1.3-RELEASE/extract-plugin-interface-1.3-RELEASE.jar
+Downloading from central: https://repo.maven.apache.org/maven2/org/easysdi/extract-plugin-interface/1.3-RELEASE/extract-plugin-interface-1.3-RELEASE.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.870 s
+[INFO] Finished at: 2022-04-12T15:53:17+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.2.0:tree (default-cli) on project extract: Cannot build project dependency graph: Could not resolve nor collect following dependencies: [org.easysdi:extract-plugin-interface:jar:1.3-RELEASE (compile)]: Could not resolve dependencies for project org.easysdi:extract:war:1.3.1-RELEASE: Could not find artifact org.easysdi:extract-plugin-interface:jar:1.3-RELEASE in locationtech-releases (https://repo.locationtech.org/content/groups/releases) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
